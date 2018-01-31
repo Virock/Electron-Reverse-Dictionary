@@ -1,0 +1,56 @@
+{
+  "name": "Reverse_Dictionary",
+  "version": "0.0.1",
+  "license": "Open Source",
+  "main": "main.js",
+  "description": "App finds the word a sentence is a description of",
+  "scripts": {
+    "postinstall": "install-app-deps",
+    "start": "npm install && electron ./app",
+    "pack": "build --dir",
+    "dist": "build"
+  },
+  "keywords": [
+    "util",
+    "functional",
+    "server",
+    "client",
+    "browser"
+  ],
+  "author": "Ahuwanya Victor <viirockn7@gmail.com>",
+  "contributors": [],
+  "dependencies": {
+    "jquery": "^3.2.1"
+  },
+  "build": {
+    "appId": "virock.com.example",
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "NSIS",
+      "icon": "build/icon.ico"
+    }
+  },
+  "devDependencies": {
+    "electron": "latest",
+    "electron-builder": "^19.27.3"
+  }
+}

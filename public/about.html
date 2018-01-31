@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>About</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <!--If running a new project and need to use jquery, run this in cmd "npm install jquery --save" (in the folder where package.json is located)-->
+        <script>window.$ = window.jQuery = require('jquery');</script>
+        <script>
+            const remote = require('electron').remote;
+            //how to alter menu items
+            /*const remote = require('electron').remote;
+            const Menu = remote.Menu;
+            Menu.setApplicationMenu(null);*/
+    
+            //how to enable right click functions
+            /*const remote = require('electron').remote;
+            const Menu = remote.Menu;
+            const MenuItem = remote.MenuItem;
+
+            var menu = new Menu();
+            menu.append(new MenuItem({ label: 'MenuItem1', click: function() { console.log('item 1 clicked'); } }));
+            menu.append(new MenuItem({ type: 'separator' }));
+            menu.append(new MenuItem({ label: 'MenuItem2', type: 'checkbox', checked: true }));
+
+            window.addEventListener('contextmenu', function (e) {
+              e.preventDefault();
+              menu.popup(remote.getCurrentWindow());
+            }, false);*/
+        </script>
+        <script>
+            function openWebsite(website)
+            {       
+                remote.shell.openExternal(website)
+                return;
+            }
+        </script>
+        <script>
+            
+        </script>
+    </head>
+    <body>
+        <div class="panel panel-default words">
+            <div class="panel-heading indivWords" onclick="openWebsite('https://www.datamuse.com/api/')">
+              <h3 class="panel-title">Datamuse API</h3>
+            </div>
+            <div class="panel-body indivWords" onclick="openWebsite('https://https://github.com/ansteh/datamuse/blob/master/LICENSE')">
+              License
+            </div>
+        </div>
+        <div class="panel panel-default words">
+            <div class="panel-heading indivWords" onclick="openWebsite('https://developer.oxforddictionaries.com/documentation')">
+              <h3 class="panel-title">Oxford Dictionaries API</h3>
+            </div>
+            <div class="panel-body indivWords" onclick="openWebsite('https://developer.oxforddictionaries.com/api-terms-and-conditions')">
+              License
+            </div>
+        </div>
+        <div class="panel panel-default words">
+            <div class="panel-heading indivWords" onclick="openWebsite('https://icons8.com/icon/54968/Dictionary')">
+              <h3 class="panel-title">Icons8 - The largest icons pack ever</h3>
+            </div>
+            <div class="panel-body indivWords" onclick="openWebsite('https://icons8.com/license/')">
+              License
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Ahuwanya Victor</h3>
+            </div>
+            <div class="panel-body">
+              viirockn7@gmail.com
+            </div>
+        </div>
+    </body>
+</html>
